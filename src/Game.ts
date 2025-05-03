@@ -8,6 +8,9 @@ const player = new Player(13, 23);
 
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = 'white';
+  ctx.font = '16px monospace';
+  ctx.fillText(`Score: ${player.score}`, 10, 20);
   maze.draw(ctx);
   player.update(maze);
   player.draw(ctx);
